@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vsc-bg: #1e1e1e;
+  --color-vsc-sidebar: #252526;
+  --color-vsc-sidebar-header: #2d2d2d;
+  --color-vsc-border: #2b2b2b;
+  --color-vsc-hover: #2a2d2e;
+  --color-vsc-active: #37373d;
+  --color-vsc-selection: #094771;
+  --color-vsc-text: #cccccc;
+  --color-vsc-muted: #858585;
+  --color-vsc-label: #bbbbbb;
+  --color-vsc-accent: #007acc;
+  --color-vsc-icon-folder: #dcb67a;
+  --color-vsc-icon-file: #519aba;
+  --color-vsc-activity: #333333;
+  --color-vsc-danger: #c72e2e;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      'Segoe WPC',
+      'Segoe UI Emoji',
+      system-ui,
+      sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .vsc-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(121, 121, 121, 0.4) transparent;
+  }
+
+  .vsc-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .vsc-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(121, 121, 121, 0.4);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-clip: padding-box;
+  }
+
+  .vsc-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.7);
+    background-clip: padding-box;
+  }
+
+  .vsc-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .tree-collapse {
+    display: grid;
+    transition: grid-template-rows 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .tree-collapse[data-open='true'] {
+    grid-template-rows: 1fr;
+  }
+
+  .tree-collapse[data-open='false'] {
+    grid-template-rows: 0fr;
+  }
+
+  .tree-collapse-inner {
+    overflow: hidden;
+  }
+}
