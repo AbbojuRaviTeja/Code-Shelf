@@ -89,4 +89,4 @@ Match the Storebox / PDF requirements:
 | Tool | Use |
 |------|-----|
 | **Cursor AI** | Implementation, refactors, debugging |
-| **ChatGPT** | Planning, prompts, architecture guidance |
+| **ChatGPT** | Planning, architecture guidance |

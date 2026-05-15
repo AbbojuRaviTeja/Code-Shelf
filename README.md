@@ -4,9 +4,7 @@ VS Code–style file explorer in the browser: create, rename, and delete files/f
 
 ## Live demo
 
-Replace before submit:
-
-`https://your-deployment-url.vercel.app`
+`https://code-shelf-three.vercel.app/`
 
 ## Setup
 
